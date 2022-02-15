@@ -1,1 +1,115 @@
 esto es una prueba de git...
+
+## primeros paso en git
+
+PS C:\Users\zuzucodez> cd D:\Cursos
+PS D:\Cursos> mkdir gitcurso
+
+    Directory: D:\Cursos
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           2/15/2022  3:48 PM                gitcurso
+
+PS D:\Cursos> cd gitcurso
+PS D:\Cursos\gitcurso> git init
+Initialized empty Git repository in D:/Cursos/gitcurso/.git/
+PS D:\Cursos\gitcurso> ls -hidden
+
+    Directory: D:\Cursos\gitcurso
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d--h-           2/15/2022  3:55 PM                .git
+
+PS D:\Cursos\gitcurso> cd .git
+PS D:\Cursos\gitcurso\.git> ls
+
+    Directory: D:\Cursos\gitcurso\.git
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           2/15/2022  3:55 PM                hooks
+d----           2/15/2022  3:55 PM                info
+d----           2/15/2022  3:55 PM                objects
+d----           2/15/2022  3:55 PM                refs
+-a---           2/15/2022  3:55 PM            130 config
+-a---           2/15/2022  3:55 PM             73 description
+-a---           2/15/2022  3:55 PM             21 HEAD
+
+PS D:\Cursos\gitcurso\.git> cd..
+PS D:\Cursos\gitcurso> cat > name.txt
+
+cmdlet Get-Content at command pipeline position 1
+Supply values for the following parameters:
+Path[0]:
+Get-Content: Cannot bind argument to parameter 'Path' because it is an empty array.
+PS D:\Cursos\gitcurso> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        name.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Cursos\gitcurso> git add .
+PS D:\Cursos\gitcurso> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   name.txt
+
+PS D:\Cursos\gitcurso> git commit -m "Mi primer commit del curso Git n Github"
+[main (root-commit) b78dca5] Mi primer commit del curso Git n Github
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 name.txt
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   name.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\Cursos\gitcurso> git add .
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   name.txt
+
+PS D:\Cursos\gitcurso> git reatore --stage name.txt
+git: 'reatore' is not a git command. See 'git --help'.
+
+The most similar command is
+        restore
+PS D:\Cursos\gitcurso> git restore --stage name.txt
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   name.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\Cursos\gitcurso> git add .
+PS D:\Cursos\gitcurso> git commit -m "name.txt has sido modificado"
+[main 3b9e482] name.txt has sido modificado
+ 1 file changed, 1 insertion(+)
+PS D:\Cursos\gitcurso> git status
+On branch main
+nothing to commit, working tree clean
+PS D:\Cursos\gitcurso> git status
+On branch main
+nothing to commit, working tree clean
+PS D:\Cursos\gitcurso>
+
+
+
+
+
