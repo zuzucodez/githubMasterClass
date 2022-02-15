@@ -1,0 +1,138 @@
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   house.txt
+        modified:   name.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   house.txt
+
+PS D:\Cursos\gitcurso> git add .
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   house.txt
+        modified:   name.txt
+
+PS D:\Cursos\gitcurso> git log
+commit 3b9e482ad3ed3bfb2f375fb63a789e8890f2234f (HEAD -> main)
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:24:19 2022 -0400
+
+    name.txt has sido modificado
+
+commit b78dca511c5b885a5b50d800f74516d2fc389f2f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:13:00 2022 -0400
+
+    Mi primer commit del curso Git n Github
+PS D:\Cursos\gitcurso> git commit -m "Remover archivo house"
+[main d38e257] Remover archivo house
+ 2 files changed, 116 insertions(+), 1 deletion(-)
+ create mode 100644 house.txt
+ rewrite name.txt (100%)
+PS D:\Cursos\gitcurso> git status
+On branch main
+nothing to commit, working tree clean
+PS D:\Cursos\gitcurso> git log
+commit d38e257214979ea04fc25fcbb128fa461b747c3e (HEAD -> main)
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:44:23 2022 -0400
+
+    Remover archivo house
+
+commit 3b9e482ad3ed3bfb2f375fb63a789e8890f2234f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:24:19 2022 -0400
+
+    name.txt has sido modificado
+
+commit b78dca511c5b885a5b50d800f74516d2fc389f2f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:13:00 2022 -0400
+
+    Mi primer commit del curso Git n Github
+PS D:\Cursos\gitcurso> rm house.txt
+PS D:\Cursos\gitcurso> git add .
+PS D:\Cursos\gitcurso> git commit -m "house.txt removido"
+[main c7b9ac1] house.txt removido
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 house.txt
+PS D:\Cursos\gitcurso> git log
+commit c7b9ac1d46238b1ed128228aec27a669e8085d6b (HEAD -> main)
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 17:02:25 2022 -0400
+
+    house.txt removido
+
+commit d38e257214979ea04fc25fcbb128fa461b747c3e
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:44:23 2022 -0400
+
+    Remover archivo house
+
+commit 3b9e482ad3ed3bfb2f375fb63a789e8890f2234f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:24:19 2022 -0400
+
+    name.txt has sido modificado
+
+commit b78dca511c5b885a5b50d800f74516d2fc389f2f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:13:00 2022 -0400
+
+    Mi primer commit del curso Git n Github
+PS D:\Cursos\gitcurso> git reset d38e257214979ea04fc25fcbb128fa461b747c3e
+Unstaged changes after reset:
+D       house.txt
+PS D:\Cursos\gitcurso> git log
+commit d38e257214979ea04fc25fcbb128fa461b747c3e (HEAD -> main)
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:44:23 2022 -0400
+
+    Remover archivo house
+
+commit 3b9e482ad3ed3bfb2f375fb63a789e8890f2234f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:24:19 2022 -0400
+
+    name.txt has sido modificado
+
+commit b78dca511c5b885a5b50d800f74516d2fc389f2f
+Author: zuzucodez <67116004+zuzucodez@users.noreply.github.com>
+Date:   Tue Feb 15 16:13:00 2022 -0400
+
+    Mi primer commit del curso Git n Github
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    house.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\Cursos\gitcurso> git add .
+PS D:\Cursos\gitcurso> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    house.txt
+
+PS D:\Cursos\gitcurso> git commit -m "house restaurado"
+[main fa0e830] house restaurado
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 house.txt
+PS D:\Cursos\gitcurso> git status
+On branch main
+nothing to commit, working tree clean
+PS D:\Cursos\gitcurso> git stash
+No local changes to save
+PS D:\Cursos\gitcurso> git stash pop
+No stash entries found.
+PS D:\Cursos\gitcurso> git status
+On branch main
+Untracked files:
